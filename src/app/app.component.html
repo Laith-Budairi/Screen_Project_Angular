@@ -1,0 +1,17 @@
+<div class="bg" [style.backgroundImage]="'url(' + this.currentbg + ')'">
+
+  <div *ngFor="let i of this?.events[currentEvent]?.eventsProperties; let j = index"
+  [style.position]="'absolute'"
+  [style.color]="this.events[currentEvent].currentTemplate.templatesProperties[j].fontColor"
+  [style.fontFamily]="this.events[currentEvent].currentTemplate.templatesProperties[j].fontFamily"
+  [style.fontSize.px]="this.events[currentEvent].currentTemplate.templatesProperties[j].fontSize"
+  [style.left.px]="this.events[currentEvent].currentTemplate.templatesProperties[j].left"
+  [style.top.px]="this.events[currentEvent].currentTemplate.templatesProperties[j].top"
+  >
+
+      {{ i.propertyValue }}
+
+
+  </div>
+
+</div>
